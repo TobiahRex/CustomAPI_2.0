@@ -1,0 +1,24 @@
+{
+  "name": "refNodeServer",
+  "version": "1.0.0",
+  "description": "* I've already created this project once before in April, -16. * This is round 2 using vanilla Node.js",
+  "main": "crudUtility.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TobiahRex/CustomAPI_2.0.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TobiahRex/CustomAPI_2.0/issues"
+  },
+  "homepage": "https://github.com/TobiahRex/CustomAPI_2.0#readme",
+  "dependencies": {
+    "moment": "^2.13.0"
+  }
+}
