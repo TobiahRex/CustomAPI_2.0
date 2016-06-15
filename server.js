@@ -21,6 +21,7 @@ const server = http.createServer((req, res)=> {
       case 'root'   : res.write(`\n\nSquare Root = ${mathAPI.sqrt(params[2])}`); res.end(); break;
       case 'sum'    : res.write(`\n\nSum         = ${mathAPI.sum(params[2])}`); res.end(); break;
       case 'now'    : res.write(`\n\nDate        = ${dateAPI.time_Now()}`); res.end(); break;
+      case 'today'  : res.write(`\n\nToday       = ${dateAPI.today()}`); res.end(); break;
       case 'quote'  : stockAPI.get(params[2], (err, status, body) => {
         console.log('err:', err);
         if(err || status !== 200) {

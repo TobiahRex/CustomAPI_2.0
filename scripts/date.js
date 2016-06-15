@@ -5,6 +5,9 @@ const moment = require('moment');
 let dateAPI = {
   time_Now(){
     return moment().format('LTS');
+  },
+  today(){
+    return moment().format('');
   }
 };
 
