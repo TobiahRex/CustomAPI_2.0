@@ -1,11 +1,16 @@
 'use strict';
 
-const PORT = 3000;
-let http = require('http');
-let mathAPI = require('./scripts/math.js');
-let dateAPI = require('./scripts/date.js');
+const PORT    = 3000;
+const path    = require('path');
+const fs      = require('fs');
+const mathAPI = require('./scripts/math.js');
+const dateAPI = require('./scripts/date.js');
+// const APIi = require('./scripts/APIinstructions.txt');
 
-let server = http.createServer((req, res)=> {
+const http    = require('http');
+const server = http.createServer((req, res)=> {
+    let instructions = fs.readFileSync(path.join(__dirname, 'scripts/APIinstructions.txt'), 'utf8');
+    res.write(path.join(instructions));
     console.log('Address: ', req.url);
     // res.end('hi');
 
@@ -17,7 +22,7 @@ let server = http.createServer((req, res)=> {
       case 'cube'   : res.write(`Cube        = ${mathAPI.cube(params[2])}`); break;
       case 'root'   : res.write(`Square Root = ${mathAPI.sqrt(params[2])}`); break;
       case 'sum'    : res.write(`Sum         = ${mathAPI.sum(params[2])}`); break;
-      case 'date'   : res.write(`Date        = ${dateAPI.sum(params[2])}`); break;
+      case 'now'   : res.write(`Date         = ${dateAPI.time_Now()}`); break;
       default : res.write(`${params}`);
     };
 

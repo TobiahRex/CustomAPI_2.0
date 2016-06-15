@@ -1,9 +1,11 @@
 'use strict';
 
+const moment = require('moment');
+
 let dateAPI = {
-  today(){
-    
+  time_Now(){
+    return moment().format('LTS');
   }
-}
+};
 
 module.exports = dateAPI;
