@@ -1,3 +1,16 @@
-### Features
-* Date API
-* Time API
+Available Requests:
+****************************************
+Date API  :
+  Current Time = '/now'
+  Current Date = '/today'
+
+Stock API :
+  JSON Stock   = '/quote/AAPL'
+
+Math  API :
+  Sum          = '/sum/123'
+  Square       = '/square/2'
+  Cube         = '/cube/2'
+  Square Root  = '/root/49'
+
+****************************************

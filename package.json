@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/TobiahRex/CustomAPI_2.0#readme",
   "dependencies": {
-    "moment": "^2.13.0"
+    "moment": "^2.13.0",
+    "request": "^2.72.0"
   }
 }
